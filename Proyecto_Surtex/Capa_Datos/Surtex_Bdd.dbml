@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SURTEX" Class="Surtex_BddDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=SURTEX;Integrated Security=True" SettingsObjectName="Capa_Datos.Properties.Settings" SettingsPropertyName="SURTEXConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Cargos" Member="Cargos">
+    <Type Name="Cargos">
+      <Column Name="id_car" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nom_car" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Cargos_Empleado" Member="Empleado" ThisKey="id_car" OtherKey="id_car" Type="Empleado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Productos" Member="Productos">
+    <Type Name="Productos">
+      <Column Name="id_pro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nom_pro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Datos_Empresa" Member="Datos_Empresa">
+    <Type Name="Datos_Empresa">
+      <Column Name="nom_emp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dir_emp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tel_emp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Departamento" Member="Departamento">
+    <Type Name="Departamento">
+      <Column Name="id_dep" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nom_dep" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Departamento_Empleado" Member="Empleado" ThisKey="id_dep" OtherKey="id_dep" Type="Empleado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Empleado" Member="Empleado">
+    <Type Name="Empleado">
+      <Column Name="Id_empleado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre_empleado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apellido_empleado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cedula_empleado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_car" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_dep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Cargos_Empleado" Member="Cargos" ThisKey="id_car" OtherKey="id_car" Type="Cargos" IsForeignKey="true" />
+      <Association Name="Departamento_Empleado" Member="Departamento" ThisKey="id_dep" OtherKey="id_dep" Type="Departamento" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.Insert_empleado" Method="Insert_empleado">
+    <Parameter Name="Nombre_empleado" Parameter="nombre_empleado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Apellido_empleado" Parameter="apellido_empleado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Cedula_empleado" Parameter="cedula_empleado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="id_car" Type="System.Int32" DbType="Int" />
+    <Parameter Name="id_dep" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Edit_empleado" Method="Edit_empleado">
+    <Parameter Name="Id_empleado" Parameter="id_empleado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre_empleado" Parameter="nombre_empleado" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="Apellido_empleado" Parameter="apellido_empleado" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="Cedula_empleado" Parameter="cedula_empleado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="id_car" Type="System.Int32" DbType="Int" />
+    <Parameter Name="id_dep" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Buscar_empleado" Method="Buscar_empleado">
+    <Parameter Name="Cedula_empleado" Parameter="cedula_empleado" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Buscar_empleadoResult">
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cedula_empleado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Departamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Eliminar_empleado" Method="Eliminar_empleado">
+    <Parameter Name="Cedula_empleado" Parameter="cedula_empleado" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

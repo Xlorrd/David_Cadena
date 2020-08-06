@@ -1,0 +1,10 @@
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\bin\Debug\Capa_Negocio.dll
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\bin\Debug\Capa_Negocio.pdb
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\bin\Debug\Capa_Datos.dll
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\bin\Debug\Capa_Datos.pdb
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\bin\Debug\Capa_Datos.dll.config
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\obj\Debug\Capa_Negocio.csprojAssemblyReference.cache
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CopyComplete
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+C:\Users\Alex\source\repos\David_Cadena\Proyecto_Surtex\Capa_Negocio\obj\Debug\Capa_Negocio.pdb

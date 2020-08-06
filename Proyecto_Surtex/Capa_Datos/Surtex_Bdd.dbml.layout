@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Surtex_Bdd">
+  <DataContextMoniker Name="/Surtex_BddDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1e2b8754-7490-4f8a-b259-6e26da7f803b" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/Surtex_BddDataContext/Cargos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a4ef377-75b5-4990-86ab-cab3ca717ffd" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a08e92e3-15eb-4bed-be25-d56c2f78340b" absoluteBounds="3.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/Surtex_BddDataContext/Productos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77a0dea0-324d-4cea-9d7c-7acc5aab1e2d" absoluteBounds="3.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9bc952d-da5d-4538-8cc0-a9642f3d83a2" absoluteBounds="3.75, 5.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/Surtex_BddDataContext/Datos_Empresa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="276134a1-0880-4869-83cf-a85247aea899" absoluteBounds="3.765, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a287a8a-c028-4dc6-b86e-448881fad4fa" absoluteBounds="0.75, 4.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/Surtex_BddDataContext/Departamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dd39381-be98-4531-a601-a00464e64f77" absoluteBounds="0.765, 4.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2184c8af-b790-4104-bb0f-c3379c6f2c7e" absoluteBounds="3.5, 0.875, 2, 1.9631982421874998">
+      <DataClassMoniker Name="/Surtex_BddDataContext/Empleado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3bc0d001-1317-480c-a779-45a722f98b64" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Surtex_BddDataContext/Cargos/Cargos_Empleado" />
+      <nodes>
+        <classShapeMoniker Id="1e2b8754-7490-4f8a-b259-6e26da7f803b" />
+        <classShapeMoniker Id="2184c8af-b790-4104-bb0f-c3379c6f2c7e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.22524251302083); (3.59375 : 5.22524251302083); (3.59375 : 2.8381982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Surtex_BddDataContext/Departamento/Departamento_Empleado" />
+      <nodes>
+        <classShapeMoniker Id="2a287a8a-c028-4dc6-b86e-448881fad4fa" />
+        <classShapeMoniker Id="2184c8af-b790-4104-bb0f-c3379c6f2c7e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
